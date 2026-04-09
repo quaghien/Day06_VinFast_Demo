@@ -1,18 +1,18 @@
 import streamlit as st
 import uuid
 
-from constants import CONFIDENCE_THRESHOLD
+from duong.constants import CONFIDENCE_THRESHOLD
 
 # --- Import thật khi Phase 2 & 4 sẵn; dùng stub để chạy thử độc lập ---
 try:
     from engine import agent_app
 except ImportError:
-    from engine_stub import agent_app
+    from duong.engine_stub import agent_app
 
 try:
     from logger import append_entry
 except ImportError:
-    from logger_stub import append_entry
+    from duong.logger_stub import append_entry
 
 # ---------------------------------------------------------------------------
 # Page config
