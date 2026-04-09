@@ -95,7 +95,7 @@ for msg in curr_session["messages"]:
 if st.session_state.booking_mode:
     st.subheader("Để lại thông tin để chuyên viên VinFast hỗ trợ")
     with st.form("booking_form"):
-        name = st.text_input("Họ và tên")
+        name = st.text_input("Họ tên")
         phone = st.text_input("Số điện thoại")
         date = st.date_input("Ngày dự kiến lái thử/tư vấn")
         submitted = st.form_submit_button("Gửi thông tin")
@@ -122,7 +122,7 @@ if not st.session_state.booking_mode:
         prompt = curr_session["messages"][-1]["content"]
 
         with st.chat_message("assistant"):
-            with st.spinner("Đang tìm kiếm thông tin..."):
+            with st.spinner("Đang tìm kiếm thông tin...."):
                 final_state = agent_app.invoke({
                     "input": prompt,
                     "chat_history": curr_session["memory_cache"]
@@ -162,7 +162,7 @@ if not st.session_state.booking_mode:
             curr_session["memory_cache"].append(turn)
 
             if len(curr_session["memory_cache"]) >= 3:
-                with st.spinner("Đang nén bộ nhớ để tối ưu tốc độ..."):
+                with st.spinner("Đang nén bộ nhớ để tối ưu tốc độ...."):
                     summary = summarize_memory(curr_session["memory_cache"])
                     curr_session["memory_cache"] = [f"{summary}"]
         
