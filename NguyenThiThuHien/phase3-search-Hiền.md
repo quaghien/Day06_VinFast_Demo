@@ -1,6 +1,6 @@
 # Phase 3 — Search (`search.py`)
 
-> Đọc `CONTEXT.md` trước. File mô tả phần Phase 3 đảm nhiệm.
+> Đọc `CONTEXT.md` trước. File mô tả phần Phase 3.
 
 ---
 
